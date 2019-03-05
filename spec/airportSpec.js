@@ -29,4 +29,9 @@ describe('Airport', function() {
     expect(a.land(p3)).toEqual("sorry, airport is full!")
   })
 
+  it("has a default capacity which can be overridden", function(){
+    expect(a.capacity).toEqual(2)
+    a.capacity = 10;
+    expect(a.capacity).toEqual(10)
+  })
 });
