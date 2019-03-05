@@ -14,4 +14,10 @@ describe('Airport', function() {
   a.takeOff(p)
   expect(a.planes_landed).not.toContain(p)
   })
+
+  it("says plane can't take off if it's stormy", function() {
+    a.weather = "stormy";
+    expect(a.air_control).toEqual("Plane can't take off")
+  })
+
 });
